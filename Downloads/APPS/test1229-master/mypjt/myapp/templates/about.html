@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+    {% block main %}
+        <h1>about us<h1>
+        <h2>portforio</h2>
+            <p>I released {{num_svc | intcomma}} services.</p>
+        <h2>skills</h2>
+            <ul>
+                {% for skill in skills %} 
+                <li>{{ skill }}</li>
+                {% empty %}
+                <li>"NO SKILLS"</li>
+                {% endfor %}
+            </ul>
+    {% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load static %}
+    {% block main %}
+        <h1>HOME</h1>
+        <p>welcome,{{ username }}!</p>
+        <p>now is {% now "m"%}</p>
+        <img src="{% static 'welcome.jpg' %}" />
+    {% endblock %}
